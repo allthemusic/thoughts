@@ -79,9 +79,9 @@
     - 'title:Let It Happen'
     - 'token:2015'
     - 'token:currents'
-    - # 'token:it' -- stopwords like 'it' are excluded from tokenized output
     - 'token:happen'
     - 'token:impala'
+    - # 'token:it' -- stopwords like 'it' are excluded from tokenized output
     - 'token:let'
     - 'token:tame'
     - 'year:2015'
