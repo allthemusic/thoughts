@@ -190,6 +190,8 @@
 
     Additionally, to aide in standard peer-discovery processes, Alice's Peer ID is added to Bob's client's internal peer list.
 
+    > At this point, we could also perform the same request for every other peer which Bob already knows about (assuming that either Bob has knowingly not fetched and indexed all of the content of all of the peers he knows about, or at least that those peers are likely to have newly discovered content which Bob doesn't yet know about)
+
 8. The object retrieved at that path will be a 'list' of metadata-nodes each of which point to content which matches this search token.
 
 9. Each of these are retrieved and then indexed locally by Bob's client's local search indexing process.
