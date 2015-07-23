@@ -6,49 +6,49 @@
 
 ## Index in Pubtree
 
-- indexing peers publish a tree of search tokens/facets with each leaf being a "list" node which links to track metadata objects which define content matching that search token
-- something like this:
-  ```yaml
-  pubtree:
-    index:
-      QmY4Rs1sWinJgeNmME7VpAZWooUouNHF9TSWJ4oWVdhJ41: # hash of 'artist:Tame Impala'
-        - QmTLZn8wTHzQ4Vh9vxi68uN4HiR7EB26ro6paNMP8k61GQ
-        - QmTi5wvUuSnzs1joycSfoowEviytE7vAcrsciruHhTmuDq
-        - QmVZahjQy8fgkxD6fKNKuuY2uBohbkf2JnZ6syhpkrWsSo
-        - QmaHXADi79HCmmGPYMmdqvyemChRmZPVGyEQYmo6oS2C3a
-      QmcpRKGaSeby5XKmA5dc2zTGwSiAe7JVyRGL2jCi873Aij: # hash of 'token:tame'
-        - QmTLZn8wTHzQ4Vh9vxi68uN4HiR7EB26ro6paNMP8k61GQ
-        - QmTi5wvUuSnzs1joycSfoowEviytE7vAcrsciruHhTmuDq
-        - QmVZahjQy8fgkxD6fKNKuuY2uBohbkf2JnZ6syhpkrWsSo
-        - QmaHXADi79HCmmGPYMmdqvyemChRmZPVGyEQYmo6oS2C3a
-        - QmTeCatDYBWSpSoqV3HFsrdS7U3SpmojywFnP6tt5irRqK
-        - Qmet7SbXQGwuCueLukMgk6tdZkeoKqNGr4yvHpF1CkuDyU
-      QmZisKuoCZfDuRf3nkt1Xm7LXoScL31RWNGuAMeMTeogJe: # hash of 'token:love'
-        - QmSzY5u4qtmfU8DR24SQzF5f6JNnzmxLoqLVnmbou56aAn
-        - QmTeCatDYBWSpSoqV3HFsrdS7U3SpmojywFnP6tt5irRqK
-        - QmYJPtDLaCqKUDBYUKWhKvPyckgWubXPKoAH3kth351YcW
-        - Qmet7SbXQGwuCueLukMgk6tdZkeoKqNGr4yvHpF1CkuDyU
-        - QmVq6eUjrUHckcUEbJF6pSdfWAAsFwi57jtdm5Sn5VFvRp
-        - QmSdveHM1ShmHEjrNyLdkY9MYPyEKCgVvWXHvvbXCTP951
-        - QmXJS1PUTdmRcxmDawUCBV6QdHV6NMxzDoFD44TULssSZE
-        - Qmdq7c5kpLfsWi4aQpDM2T7g6pUz48iSdmKK6XyfZ9HkUr
-      QmbuJEJBywtV9S9gTK7d21FkFhvAnV5J6iqD4siKZApFeC: # hash of 'genre:blues'
-        - QmWSXsLMqSKBT4msxvkNrAivELvfvXmE3LQ9xzSoNBAyuz
-        - QmTx78WMfVC5XSirzoheZYUL7yJe4WXW2XjvPDqVKy1JLX
-        - QmbQm1W47hgHvo2Ytj1DNKVymc6KsXvPYW5AQxvi85LcGr
-        - QmahXc6ZJdMUtu3xUrwveSYC5VqHHeBqTLzqdtops1LjaG
-        - QmUmsfaqNtWpGXuYGZ6FeC2pSLvP6qhVoYvYAmo9J4YvtZ
-        - QmVGpQGZWCJLVREtuwsUfcpt7y4bnH3tpaQQ4gHiRyLPXL
-    peers:
-      - QmVaPTddRyjLjMoZnYufWc5M5CjyGNPmFEpp5HtPKEqZFG
-      - QmeSJ1cekSdxgzmJDnH7nyJu3HCjsU4nKCxNkh5wABE9HN
-      - ...
-    contents:
-      - Qmdx97coS2FKH2Wc1sr3fUnrw3ooicyfBcaEKQx9vdiGU2
-      - QmWV2B5h6esbJZXyksPyb9bxrHYzkeW8HVYit8vJbkk6Pz
-      - ...
-    release: QmUPWWPbGb8rpr8R9MsA8SWYuT39ADZfdNCKehoGa1BNGH
-  ```
+Peers who are actively indexing publish a tree of search tokens/facets with each leaf being a "list" node which links to track metadata objects which define content matching that search token.
+
+```yaml
+pubtree:
+  index:
+    QmY4Rs1sWinJgeNmME7VpAZWooUouNHF9TSWJ4oWVdhJ41: # hash of 'artist:Tame Impala'
+      - QmTLZn8wTHzQ4Vh9vxi68uN4HiR7EB26ro6paNMP8k61GQ
+      - QmTi5wvUuSnzs1joycSfoowEviytE7vAcrsciruHhTmuDq
+      - QmVZahjQy8fgkxD6fKNKuuY2uBohbkf2JnZ6syhpkrWsSo
+      - QmaHXADi79HCmmGPYMmdqvyemChRmZPVGyEQYmo6oS2C3a
+    QmcpRKGaSeby5XKmA5dc2zTGwSiAe7JVyRGL2jCi873Aij: # hash of 'token:tame'
+      - QmTLZn8wTHzQ4Vh9vxi68uN4HiR7EB26ro6paNMP8k61GQ
+      - QmTi5wvUuSnzs1joycSfoowEviytE7vAcrsciruHhTmuDq
+      - QmVZahjQy8fgkxD6fKNKuuY2uBohbkf2JnZ6syhpkrWsSo
+      - QmaHXADi79HCmmGPYMmdqvyemChRmZPVGyEQYmo6oS2C3a
+      - QmTeCatDYBWSpSoqV3HFsrdS7U3SpmojywFnP6tt5irRqK
+      - Qmet7SbXQGwuCueLukMgk6tdZkeoKqNGr4yvHpF1CkuDyU
+    QmZisKuoCZfDuRf3nkt1Xm7LXoScL31RWNGuAMeMTeogJe: # hash of 'token:love'
+      - QmSzY5u4qtmfU8DR24SQzF5f6JNnzmxLoqLVnmbou56aAn
+      - QmTeCatDYBWSpSoqV3HFsrdS7U3SpmojywFnP6tt5irRqK
+      - QmYJPtDLaCqKUDBYUKWhKvPyckgWubXPKoAH3kth351YcW
+      - Qmet7SbXQGwuCueLukMgk6tdZkeoKqNGr4yvHpF1CkuDyU
+      - QmVq6eUjrUHckcUEbJF6pSdfWAAsFwi57jtdm5Sn5VFvRp
+      - QmSdveHM1ShmHEjrNyLdkY9MYPyEKCgVvWXHvvbXCTP951
+      - QmXJS1PUTdmRcxmDawUCBV6QdHV6NMxzDoFD44TULssSZE
+      - Qmdq7c5kpLfsWi4aQpDM2T7g6pUz48iSdmKK6XyfZ9HkUr
+    QmbuJEJBywtV9S9gTK7d21FkFhvAnV5J6iqD4siKZApFeC: # hash of 'genre:blues'
+      - QmWSXsLMqSKBT4msxvkNrAivELvfvXmE3LQ9xzSoNBAyuz
+      - QmTx78WMfVC5XSirzoheZYUL7yJe4WXW2XjvPDqVKy1JLX
+      - QmbQm1W47hgHvo2Ytj1DNKVymc6KsXvPYW5AQxvi85LcGr
+      - QmahXc6ZJdMUtu3xUrwveSYC5VqHHeBqTLzqdtops1LjaG
+      - QmUmsfaqNtWpGXuYGZ6FeC2pSLvP6qhVoYvYAmo9J4YvtZ
+      - QmVGpQGZWCJLVREtuwsUfcpt7y4bnH3tpaQQ4gHiRyLPXL
+  peers:
+    - QmVaPTddRyjLjMoZnYufWc5M5CjyGNPmFEpp5HtPKEqZFG
+    - QmeSJ1cekSdxgzmJDnH7nyJu3HCjsU4nKCxNkh5wABE9HN
+    - ...
+  contents: # this list seems superfluous since all known content should appear in `index`
+    - Qmdx97coS2FKH2Wc1sr3fUnrw3ooicyfBcaEKQx9vdiGU2
+    - QmWV2B5h6esbJZXyksPyb9bxrHYzkeW8HVYit8vJbkk6Pz
+    - ...
+  release: QmUPWWPbGb8rpr8R9MsA8SWYuT39ADZfdNCKehoGa1BNGH
+```
 
   We can use some digest of the `artist:XXX`-style label in order to step around possible encoding or length issues for certain values (SHA2-256 Base58-encoded multihash used here). Additionally, it's this hash which will have been used for discovery.
 
