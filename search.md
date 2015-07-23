@@ -2,7 +2,7 @@
 
 1. building of search index happens locally on each peer
 2. each peer publishes a DAG-serialized, likely simplified version of its local search index
-2. discovery of newly indexable content happens via DHT find-providers query for deterministicly calculated content IDs
+2. discovery of newly indexable content happens via DHT find-providers query for deterministically calculated content IDs
 
 ## Index in Pubtree
 
@@ -181,7 +181,7 @@
     - QmRuqS9hv17XT752DBKinP5YxqKSVVtmv9huQEKsch75qR
     ```
 
-7. Alice's knowledge of tracks matching the token `tame` can be retreived using the following path:
+7. Alice's knowledge of tracks matching the token `tame` can be retrieved using the following path:
 
     ```yaml
     /ipns/<peer-id>/index/<hash-of-discovery-token>
@@ -190,7 +190,7 @@
 
     Additionally, to aide in standard peer-discovery processes, Alice's Peer ID is added to Bob's client's internal peer list.
 
-8. The object retreived at that path will be a 'list' of metadata-nodes each of which point to content which matches this search token.
+8. The object retrieved at that path will be a 'list' of metadata-nodes each of which point to content which matches this search token.
 
 9. Each of these are retrieved and then indexed locally by Bob's client's local search indexing process.
 
